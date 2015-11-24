@@ -1,0 +1,76 @@
+To view an online version of this email, click here ( [weblink] )                                                                                                                          
+
+Regulation Red Tape and a not-so-crappy idea for Crowdfunding
+
+I’ve been a startup guy my entire life. I started and sold a telecom software company in my 20’s. I started and sold a financial media company in my 30’s. And now that I’m in my 40’s, I’m doing it again with Dealflow.com.  Even in my teens I had a tie dye t-shirt business I ran out of my mom’s basement. Oddly, my current partner Mike was my partner in the t-shirt company too. I guess things come full circle.
+
+Anyway, with all these ventures under my belt I’ve learned a thing or two about what it takes to start a company and run it successfully. I’m not perfect but I like to think that I’ve been open to criticism and I’ve learned that you need to know a little bit about a lot of stuff if you’re going to make it in a startup.
+
+Sure, everyone’s familiar with business axioms like “collect early and pay late” and “the customer is always right.” But for me, one of the most critical things I’ve learned is the importance of eliminating bureaucracy wherever possible – especially at the startup stage.  So it’s with this as a backdrop that I read Regulation Crowdfunding this past week. 
+
+My main takeaway from Regulation Crowdfunding is that there’s a lot of red tape and a lot of legal and accounting rules to comply with if you’re an issuer, funding portal, or advisor working on a crowdfunded deal. So having good counsel to deal with all the bureaucracy should be high on your priority list.
+
+Since there’s already plenty of information out there that summarizes the new rules, I thought I’d do a “Dealflow Mailbag” and address just a couple of the 50+ comments I received after last week’s blog.  I cherry-picked the ones I thought I could add my two cents to without having to be admitted to the legal bar.
+
+From David P: “My take on the new rules is that they are easy on issuers, which is totally essential if anyone is going to use them. The Q&A disclosure, not requiring tax returns, and the allowance to skip the audit the first time around are all great…Plus the thing where platforms can take an equity stake in the companies that list with them is super interesting and I don't even know what that's going to end up looking like.”
+
+My 2 cents: The type of equity compensation that a platform takes would be limited to whatever securities were being offered to investors (see p. 165 of the Regulation). Since most of these companies will be issuing common stock that has some kind of cash equivalent value, that should temper any enthusiasm to take equity in lieu of cash fees because ordinary income tax would presumably apply based on the cash equivalent value. This is why bankers typically structure their non-cash compensation in the form of warrants. Who wants to pay income tax on equity which has only a possibility – but not a guarantee – of being turned back into cash?  Kiran Lingam countered this in my LinkedIn post by pointing out that many platforms are likely to be operating at a loss as they ramp up and therefore, they’ll be able to offset that income. Fair point.
+
+From Charlie O: “In the end, it appears that most of the responsibilities to comply with the rules falls on funding platforms and not issuers.  That will add a lot of pressure to those companies but should give issuers and investors more comfort that things are being done right.”
+
+My 2 cents: I’m fairly convinced that for crowdfunding to work in a meaningful way, investors are going to need comfort that issuers and funding platforms won’t abscond with their hard-earned dough. One way to create this level of comfort would be through a program that resembles SIPC and forces registered funding portals to participate by paying into the program according to a percentage of their net revenues. SIPC, or the Securities Investor Protection Corporation is a non-profit, non-government membership corporation funded by FINRA broker-dealers. All brokerage firms that sell stocks and bonds are required to be members of SIPC. Seems to me that a similar framework could be developed by the crowdfunding community to reimburse investors who were victims of fraud and have no recourse against a platform if that platform is insolvent. This might be necessary since the SEC did away with the proposed bond that the portals were going to have to post.  I’d suggest calling this SIPC-like program the Crowdfunding Remuneration and Protection Fund, or “CRAP Fund” for short. (BTW, Mike gets credit for this idea.)
+
+I’ll be continuing to cover this topic, digging deeper into the most talked about issues, and I’ll be compiling all of the legal whitepapers and other thoughtful information on Regulation Crowdfunding in the coming weeks.  So if you’ve got something relevant, feel free to forward it to me and I’ll include it in the blog.  I’ll also suggest attending this year’s CfPA Annual Summit in Washington, DC on December 2.  The agenda includes a who’s who of thought leaders in this area and is sure to be informative. I’ll see you there.
+
+Steven Dresner
+steven.dresner@dealflow.com                                                        
+
+--------------------------------------------------------------------------------                                                            
+
+Dealflow Webcast - Dealflow is hosting a 30-minute webcast on Tuesday November 17 at 2pm ET to launch Dealflow.com and show you how to use it to find your next deal, your next investor, or your next client. Register today at this link: http://marketing.dealflow.com/dealflow-webcast-november-2015 
+
+--------------------------------------------------------------------------------
+
+Upcoming Events We’re Participating In
+
+Annual SEC Forum on Small Business Capital Formation  - Registration is now open for this year’s SEC Annual Forum on Small Business Capital Formation in Washington, D.C. on November 19.  We’ll be attending this event and participating in afternoon sessions to help formulate specific policy recommendations. You can register for free here: https://www.sec.gov/forms/registration-sbf
+
+CfPA Annual Summit - The Crowdfunding Professional Association hosts its annual summit on December 2 in Washington, DC.  Steven Dresner, founder of Dealflow will be speaking at the event.  Congressman Patrick McHenry will be the keynote. Register today at this link: http://www.cfpa.org/2015-summit
+
+Here's What's Happening in the World of Online Capital Formation
+
+Regulation Crowdfunding - In case you haven’t yet checked it out, here’s ( http://www.sec.gov/rules/final/2015/33-9974.pdf ) the final set of rules that permits investment crowdfunding.
+
+The Future of Fintech - In this report ( http://www3.weforum.org/docs/IP/2015/FS/GAC15_The_Future_of_FinTech_Paradigm_Shift_Small_Business_Finance_report_2015.pdf ), the World Economic Forum reviews the shift in small and medium-sized enterprise financing provided by innovative start-up companies who use technology and big data to provide credit and financial services, filling a gap left by traditional financial services providers.
+
+Global Perspective of the Online Lending Market - This presentation ( http://www.liberum.com/media/69233/Liberum-LendIt-Presentation.pdf ) given at LendIt Europe provided a thorough global perspective of the online direct lending market.
+
+Seedrs will Enter the U.S.  - Following the SEC’s announcement of final rules for Title III, UK-based Seedrs ( http://www.crowdfundinsider.com/2015/11/76671-british-invasion-seedrs-to-launch-equity-crowdfunding-in-us-in-weeks ) said it’s set to open in the United States and will launch its first campaigns soon.
+
+KoreConX Launches - KoreConX ( https://www.koreconx.com ) announced that it will offer a solution to help companies navigate the process of raising equity capital online by preparing companies for due diligence and helping to simplify shareholder communications.
+
+Whitepapers, articles and other items of interest related to Regulation Crowdfunding:
+
+Pepper Hamilton LLP Article: - http://www.pepperlaw.com/publications/sec-adopts-final-crowdfunding-regulations-2015-10-30
+
+DLA Piper Corporate Alert: - https://www.dlapiper.com/en/us/insights/publications/2015/11/sec-adopts-regulation-crowdfunding
+
+Paul Weiss Client Alert: - http://www.paulweiss.com/media/3224340/4nov15secalert.pdf                                                 
+
+
+© 2015 Dealflow Analytics, Inc. All rights reserved. Dealflow Analytics, Inc. (d/b/a Dealflow.com; “Dealflow”) is not a registered broker-dealer, not a registered investment advisor and is not providing any investment, financial or legal advice.
+
+
+This email was sent to: [Email Address]                                                            
+This email was sent by: Dealflow.com                                                            
+131 Jericho Turnpike Jericho, NY 11753                                                            
+Tel (516) 876-8006                                                            
+steven.dresner@dealflow.com ( mailto:steven.dresner@dealflow.com )                                                            
+http://dealflow.com ( http://dealflow.com )                                                            
+
+Click here ( [unsubscribe] ) to leave this mailing list.                                                            
+
+
+
+
+

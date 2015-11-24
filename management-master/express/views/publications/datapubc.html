@@ -1,0 +1,30 @@
+<xmp>
+    <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+    <Story>
+        {% for item in json_out -%} {% if item.tablestart == 'TRUE' %}
+        <Table xmlns:aid="http://ns.adobe.com/AdobeInDesign/4.0/" aid:table="table" aid:trows="{{ 2 * item.tablerows + 2 }}" aid:tcols="8">
+            <SectorHead aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="8">Private Placements: {{ item.sector }}</SectorHead>
+            <DateHead aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="1" aid:ccolwidth="36">Date</DateHead>
+            <IssuerHead aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="1" aid:ccolwidth="144">Issuer</IssuerHead>
+            <RaisingHead aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="1" aid:ccolwidth="60">Raising</RaisingHead>
+            <SpacerHead aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="1" aid:ccolwidth="6"></SpacerHead>
+            <TypeHead aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="1" aid:ccolwidth="54">Security Type</TypeHead>
+            <SourceHead aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="1" aid:ccolwidth="72">Sector</SourceHead>
+            <NameHead aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="1" aid:ccolwidth="72">Contact Name</NameHead>
+            <PhoneHead aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="1" aid:ccolwidth="60">Telephone</PhoneHead>
+            {% endif %}
+            <DealDate aid:table="cell" aid:crows="1" aid:ccols="1" aid:ccolwidth="36">{{ item.date }}</DealDate>
+            <DealIssuer aid:table="cell" aid:crows="1" aid:ccols="1" aid:ccolwidth="144" colink="https://app.dealflow.com/d/index.html#/companies/{{ item.CID }}">{{ item.issuer }}</DealIssuer>
+            <DealRaising aid:table="cell" aid:crows="1" aid:ccols="1" aid:ccolwidth="60">{{ item.raising }}</DealRaising>
+            <Spacer aid:table="cell" aid:crows="1" aid:ccols="1" aid:ccolwidth="3"></Spacer>
+            <DealType aid:table="cell" aid:crows="1" aid:ccols="1" aid:ccolwidth="54">{{ item.security }}</DealType>
+            <DealSource aid:table="cell" aid:crows="1" aid:ccols="1" aid:ccolwidth="75">{{ item.source }}</DealSource>
+            <ContactName aid:table="cell" aid:crows="1" aid:ccols="1" aid:ccolwidth="72">{{ item.name }}</ContactName>
+            <ContactNumber aid:table="cell" aid:crows="1" aid:ccols="1" aid:ccolwidth="60">{{ item.contact }}</ContactNumber>
+            <Spacer aid:table="cell" aid:crows="1" aid:ccols="1" aid:ccolwidth="36"></Spacer>
+            <DealDescription aid:table="cell" aid:crows="1" aid:ccols="7">{{ item.description }}</DealDescription>
+            {% if item.tableend == 'TRUE' %}
+        </Table>
+        {% endif %} {% endfor %}
+    </Story>
+</xmp>

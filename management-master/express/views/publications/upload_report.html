@@ -1,0 +1,141 @@
+{% extends '../layout.html' %} {% block content %}
+<div class="page-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-12" class="section-label">
+                <br />
+                <p align="right"><a href="/publications">Return</a></p>
+                <hr />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p>TSV Format Guidelines</p>
+                <p><a data-toggle="collapse" href="#datapub-guidelines" aria-expanded="false" aria-controls="datapub-guidelines">View Data Publication Guidelines</a></p>
+                <br />
+                <div class="collapse" id="datapub-guidelines">
+                    <p>Format of TSV for Data Publications</p>
+                    <div class="portlet-body">
+                        <div class="table-scrollable">
+                            <table class="table table-striped table-bordered table-advance table-hover">
+                                <thead>
+                                    <tr>
+                                        <td width="45">claimed</td>
+                                        <td width="45">tablestart</td>
+                                        <td width="45">tableend</td>
+                                        <td width="156">tablerows</td>
+                                        <td width="56">sector</td>
+                                        <td width="65">DID</td>
+                                        <td width="237">href</td>
+                                        <td width="65">date</td>
+                                        <td width="99">issuer</td>
+                                        <td width="60">raising</td>
+                                        <td width="65">security</td>
+                                        <td width="65">source</td>
+                                        <td width="153">name</td>
+                                        <td width="159">contact</td>
+                                        <td width="149">description</td>
+                                    </tr>
+                                </thead>
+                                <tbody style="font-size: 10px;">
+                                    <tr>
+                                        <td align="center">TRUE</td>
+                                        <td align="center">TRUE</td>
+                                        <td></td>
+                                        <td>{Num Deals in Sector}</td>
+                                        <td>{Sector}</td>
+                                        <td>{ID}</td>
+                                        <td>http://dealflow.com/deals/?deal={id}</td>
+                                        <td align="right">3/13/15</td>
+                                        <td>{Issuer Name}</td>
+                                        <td align="right">$750,000</td>
+                                        <td>Equity</td>
+                                        <td>SEC</td>
+                                        <td>{Contact Name}</td>
+                                        <td>{Contact Phone}</td>
+                                        <td>{Blurb}</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>{ID}</td>
+                                        <td>http://dealflow.com/deals/?deal={id}</td>
+                                        <td align="right">3/9/15</td>
+                                        <td>{Issuer Name}</td>
+                                        <td align="right">$400,000</td>
+                                        <td>Equity</td>
+                                        <td>CircleUp</td>
+                                        <td>{Contact Name}</td>
+                                        <td>{Contact Phone}</td>
+                                        <td>{Blurb}</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td align="center">TRUE</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>{ID}</td>
+                                        <td>http://dealflow.com/deals/?deal={id}</td>
+                                        <td align="right">3/9/15</td>
+                                        <td>{Issuer Name}</td>
+                                        <td align="right">$400,000</td>
+                                        <td>Equity</td>
+                                        <td>CircleUp</td>
+                                        <td>{Contact Name}</td>
+                                        <td>{Contact Phone}</td>
+                                        <td>{Blurb}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <br />
+                <p>TSV Upload Form</p>
+                <form id="uploadForm" enctype="multipart/form-data" action="/publications/upload/report" method="post">
+                    <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+                    <div class="row fileupload-buttonbar" style="width:280px; margin: auto;">
+                        <!-- The fileinput-button span is used to style the file input field as button -->
+                        <label class="control-label">Report Type</label>
+                        <div class="radio-list">
+                            <div class="radio-group">
+                                <input type="radio" name="type" id="type" value="publication" checked="checked" />
+                                <label class="label label-success label-adjustment"> Data Publication </label>
+                                <br />
+                                <br />
+                                <input type="radio" name="type" id="type" value="oberland" />
+                                <label class="label label-success label-adjustment"> Oberland Report </label>
+                                <br />
+                                <br />
+                                <input type="radio" name="type" id="type" value="tailwind" />
+                                <label class="label label-success label-adjustment"> Tailwind Report </label>
+                                <br />
+                                <br />
+                                <input type="radio" name="type" id="type" value="creative" />
+                                <label class="label label-success label-adjustment"> Creative Artists Agency Report </label>
+                                <br />
+                                <br />
+                            </div>
+                        </div>
+                        <input type="file" name="tabseparated" />
+                        <br />
+                        <br />
+                        <button type="submit" class="btn btn-default start">
+                            <i class="fa fa-upload"></i><span>Start upload </span>
+                        </button>
+                        <!-- The global file processing state -->
+                        <span class="fileupload-process">
+                                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

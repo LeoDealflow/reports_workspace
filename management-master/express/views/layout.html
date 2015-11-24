@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+    {% block stylesheets %}
+    {% endblock %}
+    <title>Dealflow Management Applications</title>
+</head>
+
+<body>
+    {% include "./navigation.html" %} {% block content %}
+    <div class="container" style="margin-top:60px;">
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <p>Dealflow Management</p>
+            </div>
+            <div class="col-xs-12 col-md-6"> </div>
+        </div>
+    </div>
+    {% endblock %}
+    <div class="page-footer">
+        <div class="container">
+            <br />
+            <hr />
+            <br />
+            2013 - <span id="copyright-date"><script>var now = new Date(); document.write(now.getFullYear());</script></span> &copy; Dealflow.com, All Rights Reserved.
+        </div>
+    </div>
+    <!-- /.container -->
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="/javascripts/scripts.js"></script>
+    {% block javascripts %}
+    <script>
+    jQuery.noConflict();
+    jQuery(document).ready(function() {
+    });
+    </script>
+    {% endblock %}
+</body>
+
+</html>

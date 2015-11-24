@@ -1,0 +1,104 @@
+To view an online version of this email, click here ( [weblink] ).     
+
+AngelList is dead, long live AngelList!
+
+I’m going to use the blog this week to say, “I told you so.”
+
+Since Tuesday, the most talked about story in our office has been AngelList. If you haven’t already heard, it was Tuesday when AngelList announced that new venture firm CSC Upshot said they’re committing $400 million to fund investments on AngelList. CSC will be run by one of China’s largest private equity firms, China Science & Merchants Investment, which has $12 billion under management.
+
+There are so many interesting facets to this story. Sarah Lacy at Pando Media wrote an insightful article, but other than Sarah’s piece, predictably, the mainstream media has covered not a single aspect of what makes this deal noteworthy.
+
+Since this is such a juicy topic, for now, I’m only focusing on the I-told-you-so part of the story and I’ll get back to what makes a CSC/Chinese deal so interesting in a later blog post.
+
+For anyone who’s listened to me talk about equities deal marketing on the Internet over the past couple of years, there’s a prediction I’ve made repeatedly: The business of raising capital online will follow a similar trajectory as P2P lending.
+
+As a quick refresher, the earliest consumer lending websites like Prosper and Lending Club were built on the premise of individuals loaning money to individuals – hence the “P2P” (peer-to-peer).  Over the span of only a few recent years, institutional investors began deploying capital into the P2P lending space, using all the available data online to make rapid – and increasingly larger – investment decisions.  Fast forward to the modern day lending environment, so much institutional capital has been pumped into the online lending market that nobody even calls it P2P anymore.  Instead, it’s widely called “marketplace lending.”
+
+That’s because lending websites have replaced the “peers” in their business model with institutional capital – or what we at Dealflow refer to as “real” capital. After all, who needs to deal with thousands of individuals when demand for your product exceeds the supply? A few weeks ago I wrote about how Prosper was paying over 10 times more for a borrower lead than an investor lead, which points not just to supply/demand problems but to heavy saturation of cash in that space.
+
+The AngelList announcement does more than just hint at what’s coming in the online equities market, it makes my P2P prediction look like reality.
+
+AngelList is a company that holds incredible sway in the startup ecosystem.  Much of their clout is derived from its close ties to the founders running all those startups, specifically those founders who’ve had exits and made a bunch of money.
+
+AngelList doesn’t have to brag about – or lie about, depending on your level of cynicism – tens of thousands of accredited investors on its website like many other deal platforms do.  They state the actual number on their blog – 4,400.
+
+I have a strong suspicion that the majority of these startup investors are startup founders themselves.  This isn’t some wild guess. Spend 10 minutes on AngelList’s website and you’ll get a sense of the demographics.
+
+If there’s a hiccup in the startup ecosystem that affects the appetite for AngelList’s risky assets, then investment from startup founders will be quick to dry up. Everyone knows this hiccup is coming. 
+
+To be sure, $400 million is a massive amount of cash to deploy into early-stage deals that average about $1 million per raise. In fact, in the Wall Street Journal coverage of the CSC announcement, AngelList’s CEO Naval Ravikant was quoted as saying, “We’re limited in how much capital we can absorb.” And he says that the money will be doled out slowly so as not to overwhelm the market.
+
+How prominently founder-investors will feature in AngelList’s future agenda is pure speculation.  AngelList may very well start to resemble OurCrowd in its investment model – that is, deploy capital from an institutional fund and round out raises with money from individuals.  If they go this route, it might be a smart strategy.  They’d keep individuals engaged and they could stick to their existing syndicates business model, which relies largely on individuals to find and vet new deals.
+
+One thing that’s not speculation though is that the CSC deal effectively back-doors AngelList right into the asset management business.  With a cash pot of $400 million, they don’t need fickle investor-founders slowing down an investment process.  Where the syndicate model breaks down is that most users of AngelList soft-commit to invest behind a syndicate lead, get to check out that lead’s deal flow, and more often than not don’t follow through with making an investment. This makes it difficult to predict whether or not cash will actually come into a deal that’s being promoted. $400 million takes care of that problem.
+
+I’m predicting that the CSC investment will be a proxy for institutional investors who will increasingly depend on Internet-based deal flow to deploy capital.  They’ll be looking toward online deal inventory and where that inventory is strongest there’ll be an enormous flow of money. Over time, individual investors will be marginalized.
+
+In the Wall Street Journal article AngelList's CEO said he believes this is just the beginning and that “$400 million is just the tip of the spear.”  I couldn’t agree more.
+
+Steven Dresner
+steven.dresner@dealflow.com                                                        
+
+
+--------------------------------------------------------------------------------
+
+Download the latest newsletter ( http://dealflow.com/publications )                                                             
+
+Dealflow.com at Finovate 2015 - At our latest presentation in New York ( http://finovate.com/videos/finovatefall-2015-dealflow/ ), we demonstrated the power of Dealflow to over 1,000 attendees interested in the latest fintech products. If you want a 5 minute primer on Dealflow.com, this is it.
+
+
+
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+Upcoming Events
+
+Dealflow presenting at Venture Vision in New York on Oct 21 - We will be presenting at “Venture Vision” on Wednesday, October 21 at the law firm of Duane Morris in New York. For information on this program, see Duane Morris’ website ( http://www.duanemorris.com ).
+
+Dealflow presenting at Fintech Meetup in New York on Nov 4 - Jon Zanoff and his Empire Startups team host their monthly Fintech Meetup ( http://www.meetup.com/NY-FinTech/events/225028785/ ) at the offices of Latham & Watkins on November 4 at 6:30 PM. We will be one of 5 companies presenting our technology and talking about the future of deal marketing on the Internet.
+
+Industry News
+
+The Secret to Building PE Deal Flow - The Capital Roundtable hosts this upcoming event ( http://www.capitalroundtable.com/masterclass/CapitalRoundtableDealSourcing2015.html ) which will cover new ideas in building private equity deal flow as the landscape continues to change for how investment professionals find opportunities.
+
+SignalFire Launches - Venture fund SignalFire announced its launch ( https://medium.com/signalfire-fund/announcing-signalfire-8a27788fb01f ) with $53 million in capital. SignalFire has been building its data-driven investment methodology for 6 years and has already made a handful of investments.
+
+Venture Capital and the Internet’s Impact - Ben Thompson writes an insightful piece ( https://stratechery.com/ ) about how the business of venture capital is changing as a result of new technologies and the growth of deal platforms online.
+
+Kabbage Raises More Cash - Online loan platform Kabbage raised $135 million ( http://techcrunch.com/2015/10/14/kabbage-loans-unicorn/ ) at a $1 billion valuation. The company loans money using online data and algorithms to measure credit worthiness.
+
+Reg A Roundtable - Fund America & OTC Markets are hosting a Reg A roundtable discussion ( http://hosted.verticalresponse.com/327098/96dbdb7135/318037385/7d4a361f3b/ ) that will cover compliance issues and market-making activities.  The event will take place at 5:00 PM in New York City on October 20.  You can register here.
+
+
+In this Week's Newsletter
+
+During the reporting period Oct 5 to Oct 11, 2015, we tracked the announcement of 173 launched fundraisings for privately-held companies worth a total of $1,220,634,800 in aggregate value. Data also includes Rule 506(c) fundraisings.
+
+
+
+Download the latest newsletter ( http://dealflow.com/publications )                                                        
+
+
+
+
+© 2015 Dealflow Analytics, Inc. All rights reserved. Dealflow Analytics, Inc. (d/b/a Dealflow.com; “Dealflow”) is not a registered broker-dealer, not a registered investment advisor and is not providing any investment, financial or legal advice. Nothing in this communication (including the attached newsletter, the “Materials”) constitutes an offer to sell or a solicitation of an offer to buy any securities. Nothing in the Materials constitutes or implies any endorsement, sponsorship, authorization, affiliation, approval or recommendation by Dealflow of any content, information, investment opportunities, securities, products or services referenced in the Materials, or otherwise. Dealflow has no obligation to undertake and has not done any due diligence, analysis or other investigation of any information contained in the Materials. Dealflow makes no express or implied representation or warranty as to, and accepts no responsibility for, the veracity, accuracy or completeness of any information contained in the Materials, for any securities, investment opportunities, or transactions discussed in the Materials, or for the value or suitability thereof. Dealflow does not have any obligation to update or revise any information contained in the Materials to reflect any change in events, conditions, or circumstances that may impact the veracity, accuracy or completeness of such information. The Materials are being presented for your general information and for personal use only. This email is only intended for its initial recipient and may not be forwarded to any other recipient and is intended to only be reviewed by “accredited investors” as defined in Rule 501 of the Securities Act of 1933. If you are in a jurisdiction where your receipt of this email is not in accordance with applicable law, you may not review this email and should contact Dealflow. By opening and reading this email you understand and agree to the disclaimers above, certify that you are an “accredited investor”, and agree that you are authorized to receive this email. You further agree that Dealflow has no liability to you whatsoever in connection with the Materials, including, without limitation, any losses you may incur in connection with any investment in any of the opportunities described in the Materials. Always conduct thorough due diligence and consult with your financial, legal and tax professionals before investing in any opportunity. 
+
+
+
+This email was sent to: [Email Address]                                                            
+This email was sent by: Dealflow.com                                                            
+131 Jericho Turnpike Jericho, NY 11753                                                            
+Tel (516) 876-8006                                                            
+steven.dresner@dealflow.com ( mailto:steven.dresner@dealflow.com )                                                            
+http://dealflow.com ( http://dealflow.com )                                                            
+
+Click here ( [unsubscribe] ) to leave this mailing list.                                                            
+
+
+
+
+

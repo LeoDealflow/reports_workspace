@@ -1,0 +1,88 @@
+{% extends '../layout.html' %} 
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css" />
+{% endblock %}
+{% block content %}
+<div class="page-container">
+    <div class="page-content">
+        <div class="container">
+           <div class="row">
+                <div class="col-xs-12 col-md-12" class="section-label">
+                    <br />
+                    <p align="right"><a href="/publications">Return</a></p>
+                    <hr />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped" id="xml-table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        DataPub ID
+                                    </th>
+                                    <th>
+                                        Created At
+                                    </th>
+                                    <th>
+                                        Report Type
+                                    </th>
+                                    <th>
+                                        Download
+                                    </th>
+                                    <th>
+                                        Supplement
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in query -%}
+                                <tr>
+                                    <td>{{ item.id}}</td>
+                                    <td>{{ item.created_at|date('Y-m-d g:i:s A', 240) }}</td>
+                                    <td>{{ item['type'] }}</td>
+                                    {% if item['type'] == 'publication' %}
+                                        <td><a href="/publications/reports/datapub/{{ item.id }}" target="blank">Newsletter XML</a>
+                                        </td>
+                                        <td><a href="/publications/reports/datapubc/{{ item.id }}" target="blank">Newsletter XML(c)</a></td>
+                                    {% elseif item['type'] == 'oberland' %}
+                                        <td><a href="/publications/reports/oberland/{{ item.id }}" target="blank">Oberland XML</a></td>
+                                        <td>&nbsp;</td>
+                                    {% elseif item['type'] == 'tailwind' %}
+                                        <td><a href="/publications/reports/tailwind/{{ item.id }}" target="blank">Tailwind XML</a></td>
+                                        <td>&nbsp;</td>
+                                    {% elseif item['type'] == 'creative' %}
+                                        <td><a href="/publications/reports/creative/{{ item.id }}" target="blank">Creative XML</a></td>
+                                        <td>&nbsp;</td>
+                                    {% else %}
+                                        <td>No Data</td>
+                                        <td>&nbsp;</td>
+                                    {% endif %}
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                        <hr />
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+ 
+{% block javascripts %}
+<script src="//cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+<script>
+    jQuery.noConflict();
+    jQuery(document).ready(function(){
+        jQuery('#xml-table').dataTable({
+            "order": [
+                [0, "desc"]
+            ]
+        });
+    });
+</script>
+{% endblock %}

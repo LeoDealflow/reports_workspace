@@ -1,0 +1,16 @@
+Hi {{{first_name}}},
+ 
+We were excited to see you expressed interest Dealflow’s exclusive webcast last week for Mesh. Getting notified about more webinars like Mesh is just one of the perks we offer as a free Dealflow.com member.
+ 
+By becoming a Dealflow.com member, you’ll not only get notifications about webinars, you’ll also receive access to find, filter, and track thousands of active deals through our platform. The best part is that we’ll only notify you about opportunities that match your preferences.
+ 
+Signing up is free and easy. Just visit www.dealflow.com and complete the one-time registration to see the largest database of deals on the internet.
+
+---
+This email was sent to: {{{email_address}}}
+This email was sent by: Dealflow.com
+Visit {{{unsubscribe}}} to leave this mailing list.
+131 Jericho Turnpike Jericho, NY 11753 
+Tel (516) 876-8006
+team@dealflow.com
+http://dealflow.com 

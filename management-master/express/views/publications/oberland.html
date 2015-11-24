@@ -1,0 +1,27 @@
+<xmp>
+    <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+    <Story>
+        <Table xmlns:aid="http://ns.adobe.com/AdobeInDesign/4.0/" aid:table="table" aid:trows="{{ length * 3 + 3}}" aid:tcols="7">
+            <MainHead aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="7">Deal Activity:</MainHead>
+            <CompanyHead aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="1" aid:ccolwidth="136">Company Name</CompanyHead>
+            <DateHead aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="1" aid:ccolwidth="95">Create Date</DateHead>
+            <SourceHead aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="1" aid:ccolwidth="107">Deal Source</SourceHead>
+            <TypeHead aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="1" aid:ccolwidth="77">Security Type</TypeHead>
+            <RaisingHead aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="1" aid:ccolwidth="86">Amount Raising</RaisingHead>
+            <RaisedHead aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="1" aid:ccolwidth="116">Amount Currently Raised</RaisedHead>
+            <RevenueHead aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="1" aid:ccolwidth="102">Revenue Generating</RevenueHead>
+            <DealSpacerHead aid:table="cell" aid:crows="1" aid:ccols="7"></DealSpacerHead>
+        {% for item in json_out -%}
+            <Company aid:table="cell" aid:crows="1" aid:ccols="1" aid:ccolwidth="136" colink="http://dealflow.com/deals/?deal={{ item.Id }}">{{ item.Company }}</Company>
+            <Date aid:table="cell" aid:crows="1" aid:ccols="1" aid:ccolwidth="95">{{ item.Created }}</Date>
+            <Source aid:table="cell" aid:crows="1" aid:ccols="1" aid:ccolwidth="107">{{ item.Source }}</Source>
+            <Type aid:table="cell" aid:crows="1" aid:ccols="1" aid:ccolwidth="77">{{ item.Type }}</Type>
+            <Raising aid:table="cell" aid:crows="1" aid:ccols="1" aid:ccolwidth="86">{{ item.Target }}</Raising>
+            <Raised aid:table="cell" aid:crows="1" aid:ccols="1" aid:ccolwidth="116">{{ item.Raised }}</Raised>
+            <Generating aid:table="cell" aid:crows="1" aid:ccols="1" aid:ccolwidth="102">{{ item.Generating }}</Generating>
+            <Description aid:table="cell" aid:crows="1" aid:ccols="7" aid:ccolwidth="720">{{ item.Description }}</Description>
+            <DealSpacer aid:table="cell" aid:crows="1" aid:ccols="7"></DealSpacer>
+        {% endfor %}
+        </Table>
+    </Story>
+</xmp>

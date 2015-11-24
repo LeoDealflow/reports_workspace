@@ -1,0 +1,25 @@
+{% extends '../layout.html' %} 
+{% block stylesheets %}
+{% endblock %}
+{% block content %}
+<div class="page-container">
+    <div class="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" style="height:180px">
+                    <br />
+                    <h2>GA Analytics Database Updated</h2>
+                    <br /><br />
+                    {% if current %}
+                    <p>The Database is current. To get the most recent activity use the "Latest Website Activity" tab.</p>
+                    {% else %}
+                    <p>The Database has been update. The database know holds all events upto <strong>{{ date }}</strong>.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block javascripts %}
+{% endblock %}

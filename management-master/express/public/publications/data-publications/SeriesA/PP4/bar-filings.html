@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.chart rect {
+  fill: steelblue;
+}
+
+.chart .axis {
+	font-size: 10pt;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif "Gotham";
+}
+
+.axis path {
+  display: none;
+}
+
+.axis line {
+  stroke: #fff;
+  stroke-opacity: 1;
+  shape-rendering: crispEdges;
+  z-index:999;
+}
+
+</style>
+<body>
+<script src="/javascripts/publications/d3.js"></script>
+<script>
+var rows = 2
+
+var svg = d3.select("body").append("svg")
+    .attr("class", "chart");
+
+var margin = {top: 50, right: 50, bottom: 0, left: 50},
+    width = 820,
+    barHeight = 60,
+    height = barHeight * rows;
+
+var maximum = 425;
+
+var x = d3.scale.linear()
+    .domain([0, maximum])
+    .range([0, width]);
+
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("top")
+    .tickSize(-height);
+
+var legend = d3.select("svg")
+	.append("g")
+	.attr("width", width)
+    .attr("height", 600)
+	.attr("class", "legend");
+	
+
+
+var red = d3.rgb(96, 48, 48);
+            var green = d3.rgb(48, 96, 48);
+            var blue = d3.rgb(48, 48, 96);
+            var red_green = d3.rgb(96, 96, 24);
+            var red_blue = d3.rgb(96, 24, 96);
+            var green_blue = d3.rgb(48, 24, 96);
+            var gray = d3.rgb(96, 96, 96);
+var color = d3.scale.ordinal()
+                .range([red, red.brighter(2), red.brighter(1), green, green.brighter(2), green.brighter(1), blue, blue.brighter(2), blue.brighter(1), red_green, red_green.brighter(2), red_green.brighter(1), red_blue, red_blue.brighter(2), red_blue.brighter(1), green_blue, green_blue.brighter(2), green_blue.brighter(1)]);
+	
+d3.tsv("vc-filings.tsv", function(error, data){
+
+var chart = d3.select(".chart")
+	 .append('g')
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  	.append("g")
+	.attr("transform", "translate(" + margin.left + "," +  margin.top + ")");;
+
+var g = chart.selectAll(".bars")
+      .data(data)
+      .enter().append("g")
+      .attr("class", "bars");
+
+  g.append("rect")
+    .attr("y", function(d, i) { return i * barHeight; })
+    .attr("height", barHeight - 1)
+    .attr("width", function(d){ return x(d.numbers); })
+	.style("fill", function(d) { return color(d.name); });
+	
+	
+	 var l = legend.selectAll(".name")
+      	.data(data)
+    	.enter().append("g")
+      	.attr("class", "name");
+  
+  	l.append("text")
+		.attr("x", 50)
+		.attr("y", function(d, i) { return 220 + i * 30; })
+		.attr("fill", function(d) { return color(d.name); })
+		.attr("font-size", "22pt")
+		.attr("font-weight", "900")
+		.attr("font-family", "Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif")
+		.text("■");
+	
+	
+	l.append("text")
+		.attr("x", 70)
+		.attr("y", function(d, i) { return 220 + i * 30; })
+		.attr("fill", "#000")
+		.attr("font-size", "16pt")
+		.attr("font-family", "Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif")
+		.text(function(d) { return d.name + " (" + d.numbers + ")";  });
+
+	 chart.append("g")
+    .attr("class", "axis")
+    .call(xAxis)
+  	.select(".tick line")
+    .style("stroke", "#000");
+	
+});
+
+</script>

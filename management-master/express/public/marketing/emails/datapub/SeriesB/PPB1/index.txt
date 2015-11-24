@@ -1,0 +1,121 @@
+To view an online version of this email, click here ( [weblink] ).
+                                              
+
+The Citizen.vc letter provides some guidance but deal platforms are still inconsistent in how they handle investor accreditation
+
+
+A couple of weeks ago, there was some notable regulatory activity in the area of marketing private placement deals online.  On August 6, the SEC responded to an incoming letter seeking no-action relief from Citizen.vc, Inc.  Citizen.vc is an online venture capital platform, similar to OurCrowd or FundersClub.
+
+
+As a quick refresher, recall that private placements conducted under Rule 506(b) of Regulation D may not be marketed as a “general solicitation.”  Generally speaking, an issuer may only offer securities to persons with whom they or their broker have a “substantive pre-existing relationship.”
+
+
+The no-action letter issued by the SEC to Citizen.vc provides some helpful guidance on qualifying investors and what constitutes a pre-existing substantive relationship for purposes of determining if there has been a general solicitation in violation of Rule 506(b). Here’s the link: 
+
+
+http://www.sec.gov/divisions/corpfin/cf-noaction/2015/citizen-vc-inc-080615-502.htm
+
+
+The SEC coordinated the issuance of the Citizen.vc letter with the release of Compliance and Disclosure Interpretations (C&DI’s) that are very relevant to private placement offerings listed on websites, and specifically, clarifying what constitutes a pre-existing substantive relationship between an issuer (or someone acting on their behalf) and an investor for purposes of determining whether the issuer has conducted a public offering. The timing of the C&DI’s suggests the SEC clearly intended to provide the market with additional clarity about various practices now taking place on online deal portals.  (If you’d like me to send you the relevant C&DI’s, just email me.)  From what we understand, the staff at the SEC has been increasingly concerned about suspect practices it has observed in the industry.
+
+
+We’ve noticed very little consistency in how deal portals verify the accreditation status of investors and create this pre-existing substantive relationship.  Some websites use only a check-the-box-hey-trust-me-I’m-accredited method while others use an extended investor questionnaire to determine the sophistication of the investor. On Monday I even received an email from Venovate that asked me which method I prefer to verify my status: Income verification filed with the IRS, a letter from my accountant, or a bank statement showing net worth over $1 million.
+
+
+In many cases in reviewing the registration process of dozens of active deal portals we track at Dealflow.com, there’s at least a question about whether the portal has established a substantive pre-existing relationship with new investor sign-ups as the SEC defines it under Citizen.vc and the related CD&I’s.
+
+
+Some of this can be blamed on previous lack of clarity, however, even when there was clarity (for example, the 30-day waiting period provided under the Lamp Technologies no-action letter), not all online portals followed the guidance. At the extreme I’ve been able to visit a portal for the first time and wire my money minutes later – with no “relationship” at all.
+
+
+The Citizen.vc letter actually throws that 30-day standard right out the window in favor of a facts-and-circumstances approach.  To wit (from the SEC’s letter): “We also agree that there is no specific duration of time or particular short from accreditation questionnaire that can be relied upon solely to create such a relationship. Whether an issuer has sufficient information to evaluate, and does in fact evaluate, a prospective offeree’s financial circumstances and sophistication will depend on the facts and circumstances.”
+
+
+We talked with Dan DeWolf, partner at Mintz Levin who represented Citizen.vc. DeWolf feels that the SEC’s letter along with the CD&I’s provide more clarity in an area of online deal marketing that’s in need of better compliance. We agree with Dan. The issue of how to establish a legally meaningful relationship with an investor -- whether you’re a broker-dealer, a registered investment advisor, or a deal portal -- is critical to giving issuers more confidence to market deals online without worrying about blowing their Reg D exemption.  There’s an obvious need for better compliance in this area.
+
+
+Our sense is that it’ll take a few weeks, maybe even a few months, but in time, we’ll start seeing more consistency across deal portals in how they verify accredited status and develop a real relationship with their investors.
+
+
+Steven Dresner
+steven.dresner@dealflow.com
+
+                
+
+Citizen.VC’s homepage declares, “Startup investment simplified.” But their recent request for no-action relief leaves one to wonder... Is investing in startups online actually simple?
+
+                
+--------------------------------------------------------------------------------
+
+Download the Latest Newsletter ( http://www.dealflow.com/publications )
+
+                                                        
+New at Dealflow
+
+
+Apply for Access to our Website - We’ve been making some big changes to Dealflow.com and we continue to make improvements based on the feedback we’ve received from the community. We’ve concentrated on our data collection efforts and on building powerful tools to search for both deals and investors. In the meantime, you may have noticed the website is now in private beta as we gear up for release of the 2.0 software. If you would like to apply to be a part of the private beta, call us at (516) 876-8006.
+
+
+Dealflow.com is #1 at Amazon Event - Dealflow.com just won first place at the Amazon.com AWS event in New York City.  We were #1 out of the companies who presented at the event. Amazon selected companies based on the complexity and creativity of applications being developed in their AWS cloud-hosting environment. Amazon also gave us cash to put towards cloud hosting. Thanks Amazon.
+
+
+From FinFair - In other event news, thanks to Dara Albright who hosted FinFair 2015 which focused on the technologies driving the crowd-centric retail alternatives market.  We participated on the panel “A New Era of Securities Marketing.” If you want to download the program, you can get it here ( https://finfairconf.files.wordpress.com/2015/03/finfair-2015-program.pdf ).
+
+
+Catch us at Finovate NYC - We’ll be doing a public demo of our software at Finovate ( http://finovate.com ) on September 17 in New York City. This is the largest gathering of fintech investors. Check it out.
+
+
+Learn more about Dealflow.com - We’ll also be hosting a webcast to discuss how you can invest in Dealflow.com on September 24 at 2pm EST.  If you’d like to register to attend simply click here ( http://marketing.dealflow.com/dealflow-webcast-september-2015/ ).
+
+                                                        
+
+Industry News
+
+
+OurCrowd Interview - Jon Medved of OurCrowd was interviewed by TechCrunch where he discussed ( http://techcrunch.com/2015/08/21/crowdfunding-platform-ourcrowd-seeks-a-broader-audience-including-with-traditional-vcs ) doing business in the Valley, forgoing a syndicates product, and how they get paid.
+
+
+Seedrs Kills it in Self-funding - Seedrs really killed it in their self-crowdfunding campaign, apparently generating £7,227 per minute in investment according to Crowdfund Insider ( http://www.crowdfundinsider.com/2015/08/73165-update-seedrs-generates-7227-per-minute-during-self-crowdfunding-round ).
+
+
+SyndicateRoom Comments on Seedrs Deal - In the wake of the Seedrs self-crowdfunding campaign, SyndicateRoom jumped on the announcement saying that the campaign treated the crowd as “second class citizens” because Seedrs issued preferential shares to institutional investors, to the detriment of smaller investors who participated in the offering. Read more at Crowdfund Insider ( http://www.crowdfundinsider.com/2015/08/73257-syndicateroom-congratulates-seedrs-on-funding-round-but-questions-structure-of-share-offer ).
+
+
+Marketplace Lending Workshop - LendLab ( http://lendlab.co ) is running a one-day marketplace lending workshop designed to help companies build their regulatory and operation stack on September 10 in New York City. This technical program looks like it’s geared for people with existing industry experience.
+
+
+Bill Hambrecht Chimes In - An article on Fortune.com ( http://fortune.com/2015/08/05/venture-capital-hits-average ) asks the question: Could algorithms help create a better venture capitalist? In the article, Bill Hambrecht, the legendary venture capitalist, says he can use data to increase his odds of making better investments.
+
+
+Crowdability Fundraise - Crowdability ( http://www.crowdability.com ), an equity crowdfunding research and education website, announced it raised $1.6 million from private investors. 
+
+
+Event on Reg A+ - iGlobal ( http://www.cvent.com/events/tech-reboot-3-0-reg-a-mini-ipo-summit/event-summary-40f9c3b73e924f0fbc14d67bc925854c.aspx ) announced it’s hosting their Reg A+ Mini IPO Summit on October 15 in New York City. Dealflow.com will be there talking about the increasing use of data to target investors.
+
+                                                        
+
+In this Week's Newsletter
+
+
+During the reporting period Aug 17 to Aug 23, 2015, we tracked the announcement of 217 launched fundraisings for privately-held companies worth a total of $4,332,903,368 in aggregate value.  Data also includes Rule 506(c) fundraisings.
+                
+
+During the reporting period Aug 17 to Aug 23, 2015, we tracked the announcement of 6 “advertised” fundraisings for privately-held companies worth a total of $18,500,000 in aggregate value. These fundraisings have been reported as Regulation D Rule 506(c) offerings filed on Form D.                                                                                                    
+
+--------------------------------------------------------------------------------
+
+
+
+Download the Latest Newsletter( http://www.dealflow.com/publications )
+
+© 2015 Dealflow Analytics, Inc. All rights reserved. Dealflow Analytics, Inc. (d/b/a Dealflow.com; “Dealflow”) is not a registered broker-dealer, not a registered investment advisor and is not providing any investment, financial or legal advice. Nothing in this communication (including the attached newsletter, the “Materials”) constitutes an offer to sell or a solicitation of an offer to buy any securities. Nothing in the Materials constitutes or implies any endorsement, sponsorship, authorization, affiliation, approval or recommendation by Dealflow of any content, information, investment opportunities, securities, products or services referenced in the Materials, or otherwise. Dealflow has no obligation to undertake and has not done any due diligence, analysis or other investigation of any information contained in the Materials. Dealflow makes no express or implied representation or warranty as to, and accepts no responsibility for, the veracity, accuracy or completeness of any information contained in the Materials, for any securities, investment opportunities, or transactions discussed in the Materials, or for the value or suitability thereof. Dealflow does not have any obligation to update or revise any information contained in the Materials to reflect any change in events, conditions, or circumstances that may impact the veracity, accuracy or completeness of such information. The Materials are being presented for your general information and for personal use only. This email is only intended for its initial recipient and may not be forwarded to any other recipient and is intended to only be reviewed by “accredited investors” as defined in Rule 501 of the Securities Act of 1933. If you are in a jurisdiction where your receipt of this email is not in accordance with applicable law, you may not review this email and should contact Dealflow. By opening and reading this email you understand and agree to the disclaimers above, certify that you are an “accredited investor”, and agree that you are authorized to receive this email. You further agree that Dealflow has no liability to you whatsoever in connection with the Materials, including, without limitation, any losses you may incur in connection with any investment in any of the opportunities described in the Materials. Always conduct thorough due diligence and consult with your financial, legal and tax professionals before investing in any opportunity. 
+                    
+                    
+This email was sent to: {{{email_address}}}                    
+This email was sent by: Dealflow.com                    
+131 Jericho Turnpike Jericho, NY 11753                    
+Tel (516) 876-8006                    
+steven.dresner@dealflow.com ( mailto:steven.dresner@dealflow.com )                    
+http://dealflow.com ( http://dealflow.com )                    
+                    
+Click here ( [unsubscribe] ) to leave this mailing list.                   

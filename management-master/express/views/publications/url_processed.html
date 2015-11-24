@@ -1,0 +1,70 @@
+{% extends '../layout.html' %} 
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css" />
+{% endblock %}
+{% block content %}
+<div class="page-container">
+    <div class="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped" id="xml-table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        DataPub ID
+                                    </th>
+                                    <th>
+                                        Created At
+                                    </th>
+                                    <th>
+                                        Report Type
+                                    </th>
+                                    <th>
+                                        Download
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in query -%}
+                                <tr>
+                                    <td>{{ item.id}}</td>
+                                    <td>{{ item.created_at|date('Y-m-d g:i:s A', 240) }}</td>
+                                    <td>{{ item['type'] }}</td>
+                                    {% if item['type'] == 'datapub' %}
+                                        <td><a href="/publications/urlset/datapub/{{ item.id }}" target="blank">Publications Email URLs</a>
+                                        </td>
+                                    {% elseif item['type'] == 'other' %}
+                                        <td><a href="/publications/urlset/other/{{ item.id }}" target="blank">Custom Email URLs</a>
+                                        </td>
+                                    {% else %}
+                                        <td>No Data</td>
+                                    {% endif %}
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                        <hr />
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+ 
+{% block javascripts %}
+<script src="//cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+<script>
+    jQuery.noConflict();
+    jQuery(document).ready(function(){
+        jQuery('#xml-table').dataTable({
+            "order": [
+                [0, "desc"]
+            ]
+        });
+    });
+</script>
+{% endblock %}

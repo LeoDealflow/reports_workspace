@@ -1,0 +1,50 @@
+/*
+Theme Name: upBootWP
+Theme URI: http://upplex.de/bootstrap-3-wordpress-theme-framework/
+Author: upplex
+Author URI: http://upplex.de
+Description: upBootWP is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc. and Twitter Bootstrap 3. Feel free to edit it. 
+Version: 0.1
+License: GNU General Public License
+License URI: license.txt
+Text Domain: upbootwp
+Domain Path: /languages/
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+upBootWP is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc. and Twitter Bootstrap 3 
+
+*/
+body {
+    padding: 50px;
+    font: font-family: 'Open Sans', sans-serif !important;
+}
+
+a {
+    color: #00B7FF;
+}
+
+h1 {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+table.table thead th{
+    font: 12px font-family: 'Open Sans', sans-serif !important;
+}
+
+table.table tbody td{
+    font: 12px font-family: 'Open Sans', sans-serif !important;
+}

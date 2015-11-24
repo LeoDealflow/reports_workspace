@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+body {
+    font: 10px sans-serif;
+}
+.arc path {
+    stroke: #fff;
+}
+svg {
+    background: #fff;
+}
+</style>
+
+<body>
+    <script src="/javascripts/publications/d3.js"></script>
+    <script>
+    var width = 1100,
+        height = 430,
+        radius = 180,
+        cy = 10;
+    /*
+      Colors
+      Theme Set B v1.0
+      AP
+      AW
+      AE
+      AF
+      AD
+      AQ
+      AU
+      BD
+      AR
+      AG
+      AJ
+      AZ
+      */
+    var a = d3.rgb(12, 24, 64);
+    var b = d3.rgb(172, 108, 130);
+    var c = d3.rgb(236, 229, 219);
+    var d = d3.rgb(190, 122, 102);
+    var e = d3.rgb(240, 198, 158);
+    var f = d3.rgb(242, 224, 133);
+    var g = d3.rgb(255, 188, 103);
+    var h = d3.rgb(206, 77, 69);
+    var i = d3.rgb(140, 110, 55);
+    var j = d3.rgb(145, 142, 117);
+    var k = d3.rgb(113, 147, 179);
+    var l = d3.rgb(10, 123, 131);
+    var color = d3.scale.ordinal().range([a, b, d, e, f, g, h, i, j, k, l, c]);
+    var arc = d3.svg.arc()
+        .outerRadius(radius - 40)
+        .innerRadius(radius - 90);
+
+    var key = d3.svg.arc()
+        .outerRadius(radius - 10)
+        .innerRadius(radius - 35);
+
+    var pie = d3.layout.pie()
+        .sort(null)
+        .value(function(d) {
+            return d.numbers;
+        });
+
+    var svg = d3.select("body").append("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .append("g")
+        .attr("transform", "translate(" + 200 + "," + 200 + ")");
+
+    var legend = d3.select("svg")
+        .append("g")
+        .attr("width", width)
+        .attr("height", height)
+        .attr("class", "legend");
+
+    d3.tsv("vc-numbers.tsv", function(error, data) {
+
+        data.forEach(function(d) {
+            d.numbers = +d.numbers;
+        });
+
+        var g = svg.selectAll(".arc")
+            .data(pie(data))
+            .enter().append("g")
+            .attr("class", "arc");
+
+        g.append("path")
+            .attr("d", arc)
+            .style("fill", function(d) {
+                return color(d.data.name);
+            });
+
+        g.append("text")
+            .attr("transform", function(d) {
+                return "translate(" + key.centroid(d) + ")";
+            })
+            .attr("dy", ".35em")
+            .style("text-anchor", "middle")
+            .attr("font-size", "14pt")
+            .attr("font-weight", "900")
+            .attr("font-family", "Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif")
+            .text(function(d) {
+                return d.data.percent;
+            });
+
+        var l = legend.selectAll(".name")
+            .data(pie(data))
+            .enter().append("g")
+            .attr("class", "name");
+
+        l.append("text")
+            .attr("x", 480)
+            .attr("y", function(d) {
+                cy = cy + 30;
+                return cy
+            })
+            .attr("fill", function(d) {
+                return color(d.data.name);
+            })
+            .attr("font-size", "18pt")
+            .attr("font-weight", "900")
+            .attr("font-family", "Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif")
+            .text(function(d) {
+                return d.data.percent;
+            });
+
+        cy = 10;
+
+        l.append("text")
+            .attr("x", 560)
+            .attr("y", function(d) {
+                cy = cy + 30;
+                return cy
+            })
+            .attr("fill", "#000")
+            .attr("font-size", "18pt")
+            .attr("font-family", "Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif")
+            .text(function(d) {
+                return d.data.name;
+            });
+
+
+    });
+    </script>

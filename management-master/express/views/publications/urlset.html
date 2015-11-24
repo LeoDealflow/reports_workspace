@@ -1,0 +1,5 @@
+<pre>
+    {% for item in json_out -%}
+        http://dealflow.com/analytics?e=[Email Address]&l={{item.encurl}}&i={{item.mid}}&{{item.utm}}
+    {% endfor %}
+</pre>

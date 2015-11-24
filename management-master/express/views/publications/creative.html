@@ -1,0 +1,24 @@
+<xmp>
+    <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+        <Story>
+            {% for item in json_out %}
+            <Table xmlns:aid="http://ns.adobe.com/AdobeInDesign/4.0/" aid:table="table" aid:trows="3" aid:tcols="7">
+                <CompanyHead aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="1" aid:ccolwidth="120">Company Name</CompanyHead>
+                <WebsiteHead aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="1" aid:ccolwidth="100">Website</WebsiteHead>
+                <ProfileHead aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="1" aid:ccolwidth="100">Dealflow Profile</ProfileHead>
+                <NameHead aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="1" aid:ccolwidth="100">Contact Name</NameHead>
+                <TitleHead aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="1" aid:ccolwidth="100">Title</TitleHead>
+                <EmailHead aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="1" aid:ccolwidth="100">Email</EmailHead>
+                <PhoneHead aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="1" aid:ccolwidth="100">Phone</PhoneHead>
+                <Company aid:table="cell" aid:crows="1" aid:ccols="1" aid:ccolwidth="120">{{ item['Company Name'] }}</Company>
+                <Website aid:table="cell" aid:crows="1" aid:ccols="1" aid:ccolwidth="100" colink="{{ item['Website'] }}">{{ item['Website'] }}</Website>
+                <Profile aid:table="cell" aid:crows="1" aid:ccols="1" aid:ccolwidth="100" colink="http://dealflow.com/deals/?deal={{ item['Deal Id'] }}">View Dealflow Profile</Profile>
+                <Name aid:table="cell" aid:crows="1" aid:ccols="1" aid:ccolwidth="100">{{item['Last Name']}}, {{item['First Name']}}</Name>
+                <Title aid:table="cell" aid:crows="1" aid:ccols="1" aid:ccolwidth="100">{{item['Title']}}</Title>
+                <Email aid:table="cell" aid:crows="1" aid:ccols="1" aid:ccolwidth="100">{{item['Email']}}</Email>
+                <Phone aid:table="cell" aid:crows="1" aid:ccols="1" aid:ccolwidth="100">{{item['Phone']}}</Phone>
+                <Description aid:table="cell" aid:crows="1" aid:ccols="7" aid:ccolwidth="720">{{item['Description']}}</Description>
+            </Table>
+            {% endfor %}
+        </Story>
+</xmp>

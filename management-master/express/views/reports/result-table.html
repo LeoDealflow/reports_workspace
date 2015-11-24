@@ -1,0 +1,54 @@
+{% extends '../layout.html' %} 
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/tabletools/2.2.4/css/dataTables.tableTools.css" />
+{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.7/css/jquery.dataTables.css">
+<div class="container">
+    <div class="row" style="height:40px;">
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <h3>Activity Report</h3>
+            <hr />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <div class="activity view">
+                {% autoescape false %}{{activity}}{% endautoescape %}
+            </div>
+        </div>
+    </div>
+    <div class="row" style="height:60px;">
+    </div>
+</div>
+<!--/.container-->
+{% endblock %}
+{% block javascripts %}
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/tabletools/2.2.4/js/dataTables.tableTools.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#tableA').dataTable({
+        "order": [
+            [1, "desc"]
+        ],
+        "dom": 'T<"clear">lfrtip',
+        "tableTools": {
+            "sSwfPath": "/assets/datatables/copy_csv_xls_pdf.swf"
+        }
+    }); 
+    {% autoescape false %} {{script}} {% endautoescape %}
+});
+</script>
+{% endblock %}
+</body>
+
+</html>

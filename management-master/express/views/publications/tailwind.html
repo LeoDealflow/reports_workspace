@@ -1,0 +1,20 @@
+<xmp>
+    <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+        <Story>
+            {% for item in json_out %}
+            <Table xmlns:aid="http://ns.adobe.com/AdobeInDesign/4.0/" aid:table="table" aid:trows="3" aid:tcols="5">
+                <CompanyHead aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="1" aid:ccolwidth="160">Company Name</CompanyHead>
+                <CityStateHead aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="1" aid:ccolwidth="100">City, State</CityStateHead>
+                <RaisingHead aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="1" aid:ccolwidth="80">Amount Raising</RaisingHead>
+                <SectorsHead aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="1" aid:ccolwidth="300">Company Sectors</SectorsHead>
+                <PostedHead aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="1" aid:ccolwidth="80">Posted Date</PostedHead>
+                <Company aid:table="cell" aid:crows="1" aid:ccols="1" aid:ccolwidth="160" colink="http://dealflow.com/deals/?deal={{ item['Deal Id'] }}">{{ item['Company'] }}</Company>
+                <CityState aid:table="cell" aid:ter="" aid:crows="1" aid:ccols="1" aid:ccolwidth="100">{{ item['City'] }}, {{ item['State'] }}</CityState>
+                <Raising aid:table="cell" aid:ter="" aid:crows="1" aid:ccols="1" aid:ccolwidth="80">{{item['Amount Raising']}}</Raising>
+                <Sectors aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="1" aid:ccolwidth="300">{{item['Sectors']}}</Sectors>
+                <Posted aid:table="cell" aid:ter="" aid:crows="1" aid:ccols="1" aid:ccolwidth="80">{{item['Created At']}}</Posted>
+                <Description aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="5" aid:ccolwidth="720">{{item['Description']}}</Description>
+            </Table>
+            {% endfor %}
+        </Story>
+</xmp>

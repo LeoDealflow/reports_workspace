@@ -1,0 +1,32 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+body {
+    padding: 50px;
+    font: font-family: 'Open Sans', sans-serif !important;
+}
+
+a {
+    color: #00B7FF;
+}
+
+h1 {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+table.table thead th{
+    font: 12px font-family: 'Open Sans', sans-serif !important;
+}
+
+table.table tbody td{
+    font: 12px font-family: 'Open Sans', sans-serif !important;
+}

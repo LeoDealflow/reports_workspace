@@ -1,0 +1,626 @@
+{% extends '../layout.html' %} {% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css" />
+<link rel="stylesheet" type="text/css" href="/vendors/bootstrap-datepicker/css/datepicker3.css" />
+<link rel="stylesheet" type="text/css" href="/vendors/bootstrap-timepicker/css/bootstrap-timepicker.min.css" />
+<link rel="stylesheet" type="text/css" href="/vendors/datatables/extensions/Scroller/css/dataTables.scroller.min.css" />
+<link rel="stylesheet" type="text/css" href="/vendors/datatables/extensions/ColReorder/css/dataTables.colReorder.min.css" />
+<link rel="stylesheet" type="text/css" href="/vendors/datatables/plugins/bootstrap/dataTables.bootstrap.css" /> {% endblock %} {% block content %}
+<div class="page-container">
+    <div class="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-12">
+                    <h3>Welcome to the Activity Reports Interface</h3>
+                    <hr />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-12" class="section-label">
+                </div>
+            </div>
+            <div class="row">
+                 <div class="col-xs-12 col-md-3">
+                    <p align="center">
+                        <div onclick="activity();"><img src="/images/reports/activity-enter.jpg" class="img-responsive" /></div>
+                    </p>
+                    <p align="center">
+                        <div onclick="research();"><img src="/images/reports/research-enter.jpg" class="img-responsive" /></div>
+                    </p>
+                    <p align="center">
+                        <div onclick="marketing();"><img src="/images/reports/emails-enter.jpg" class="img-responsive" /></div>
+                    </p>
+                </div>
+                <div class="col-xs-12 col-md-9">
+                    <br />
+                    <div class="collapse" id="activity">
+                        <p align="right"><img src="/images/reports/activity-label.jpg" class="img-responsive" /></p>
+                        <div role="tabpanel">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#live" aria-controls="web" role="tab" data-toggle="tab">Live Website Activity</a></li>
+                                <li role="presentation"><a href="#active" aria-controls="web" role="tab" data-toggle="tab">Website Activity after June 2015</a></li>
+                                <li role="presentation"><a href="#archive" aria-controls="web" role="tab" data-toggle="tab">Website Activity before July 2015</a></li>
+                            </ul>
+                        </div>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="live">
+                                <form role="form" id="reports" action="/reports/getgaonline">
+                                    <div class="row" style="height:40px;">
+                                        <div class="col-xs-12 col-md-12"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-md-1">
+                                        </div>
+                                        <div class="col-xs-12 col-md-10">
+                                            <p>Query Activity: <strong>Last 3 days</strong></p>
+                                            <p>This report will generate live activity on the website.</p>
+                                            <div>
+                                                <input type="hidden" class="form-control" name="livefrom" id="livefrom" style="width:200px;" placeholder="From" />
+                                                <input type="hidden" class="form-control" name="liveto" id="liveto" style="width:200px;" placeholder="To" />
+                                            </div>
+                                            <div class="form-actions">
+                                                <p align="center">
+                                                    <button type="submit" class="btn btn-success pull-right">Generate</button>
+                                                </p>
+                                            </div>
+                                            <br />
+                                            <br />
+                                        </div>
+                                        <div class="col-xs-12 col-md-1">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="active">
+                                
+                                <br />
+                                <div class="pull-left" style="padding:0 20px;">
+                                    <a href="#" name="lastweek" onclick="setformactive(yesterday(), sevendays());" />Last 7 Days</a>
+                                </div>
+                                <div class="pull-left" style="padding:0 20px;">
+                                    <a href="#" name="lastweek" onclick="setformactive(wednesday(-3), wednesday(-9));" />All Activity Last Week</a>
+                                </div>
+                                <div class="pull-left" style="padding:0 20px;">
+                                    <a href="#" name="clear" onclick="clearform();" />Clear Form</a>
+                                </div>
+                                <br />
+                                <hr />
+                                <form role="form" id="reports" action="/reports/getgarecent">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-md-1">
+                                        </div>
+                                        <div class="col-xs-12 col-md-10">
+                                            <hr /> {% if current %}
+                                            <p><span style="color:#00FF00"><i class="fa fa-check-square"></i></span> The Database <strong>is current</strong>. The database currently has events up to <strong>{{ date }}</strong>.</p>
+                                            {% else %}
+                                            <p><span style="color:#FF0000"><i class="fa fa-warning"></i></span> The database <strong>needs to be updated</strong>. The database currently only has events up to <strong>{{ date }}</strong>.</p>
+                                            {% endif %}
+                                            <hr />
+                                        </div>
+                                        <div class="col-xs-12 col-md-1">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-md-1">
+                                        </div>
+                                        <div class="col-xs-12 col-md-5">
+                                            <p>Query Activity: <strong>Post June 2015</strong></p>
+                                            <div class="form-group date-range">
+                                                <label class="control-label">Date Range</label>
+                                                <div id="range" class="input-group input-medium date-picker input-daterange" data-date="10/11/2012" data-date-format="yyyy-mm-dd">
+                                                    <input type="text" class="form-control" name="activefrom" id="activefrom" style="width:200px;" placeholder="From" /><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                </div>
+                                                <br />
+                                                <div id="range" class="input-group input-medium date-picker input-daterange" data-date="10/11/2012" data-date-format="yyyy-mm-dd">
+                                                    <input type="text" class="form-control" name="activeto" id="activeto" style="width:200px;" placeholder="To" /><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                </div>
+                                            </div>
+                                            <br />
+                                            <br />
+                                            <div class="form-group">
+                                                <label class="control-label">Output Format</label>
+                                                <div class="radio-list">
+                                                    <div class="radio-group">
+                                                        <input type="radio" name="format" id="format" value="table" checked="checked" />
+                                                        <label class="label label-success label-adjustment"> Table </label>
+                                                        <input type="radio" name="format" id="format" value="tsv" style="margin-left:1em;" />
+                                                        <label class="label label-warning label-adjustment"> TSV </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br />
+                                            <br />
+                                        </div>
+                                        <div class="col-xs-12 col-md-5">
+                                            <label class="control-label">Environment</label>
+                                                <div class="radio-list">
+                                                    <div class="radio-group">
+                                                        <input type="radio" name="envtype" id="acttype" value="marcom" checked="checked" />
+                                                        <label class="label label-default label-adjustment"> Marcom </label>
+                                                        <input type="radio" name="envtype" id="acttype" value="app" style="margin-left:1em;" />
+                                                        <label class="label label-warning label-adjustment"> App </label>
+                                                    </div>
+                                                </div>
+                                                <br /><br />
+                                            <p><a data-toggle="collapse" href="#email-filter" aria-expanded="false" aria-controls="optional-criteria">Set email filter</a></p>
+                                            <div class="collapse" id="email-filter">
+                                                <br />
+                                                <div class="form-group">
+                                                    <label class="control-label">Email Address (Optional)</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div id="username-group" class="input-group input-medium">
+                                                        <input type="text" class="form-control" name="email" id="email" style="" placeholder="Email Address" />
+                                                    </div>
+                                                    <br />
+                                                </div>
+                                            </div>
+                                            <!--
+                                            <p><a data-toggle="collapse" href="#searchterm-filter" aria-expanded="false" aria-controls="optional-criteria">Set search term filter</a></p>
+                                            <div class="collapse" id="searchterm-filter">
+                                                <div class="form-group">
+                                                    <label class="control-label">Search Term (Optional)</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div id="username-group" class="input-group input-medium">
+                                                        <input type="text" class="form-control" name="searchterm" id="searchterm" style="" placeholder="Search Term" />
+                                                    </div>
+                                                    <br />
+                                                </div>
+                                                <p>Search Term Key</p>
+                                                <p>Above you can specify an event filter, for example any newsletter downloads can be queried by applying a download filter.</p>
+                                            </div>
+                                            -->
+                                        </div>
+                                        <div class="col-xs-12 col-md-1">
+                                        </div>
+                                    </div>
+                                    <div class="row"> 
+                                        <div class="col-xs-12 col-md-1">
+                                        </div>   
+                                        <div class="col-xs-12 col-md-10">
+                                            <div class="form-actions">
+                                                <p align="center">
+                                                    <button type="submit" class="btn btn-success pull-right">Generate</button>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-1">
+                                        </div> 
+                                    </div>
+                                </form>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="archive">
+                                <br />
+                                <form role="form" id="reports" action="/reports/getgapast">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-md-1">
+                                        </div>
+                                        <div class="col-xs-12 col-md-4">
+                                            <p>Query Activity: <strong>Pre July 2015</strong></p>
+                                            <div class="form-group date-range">
+                                                <label class="control-label">Date Range</label>
+                                                <div id="range" class="input-group input-medium date-picker input-daterange" data-date="10/11/2012" data-date-format="yyyy-mm-dd">
+                                                    <input type="text" class="form-control" name="archivefrom" id="archivefrom" style="width:200px;" placeholder="From" /><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                </div>
+                                                <br />
+                                                <div id="range" class="input-group input-medium date-picker input-daterange" data-date="10/11/2012" data-date-format="yyyy-mm-dd">
+                                                    <input type="text" class="form-control" name="archiveto" id="archiveto" style="width:200px;" placeholder="To" /><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group" style="display:none;">
+                                                <label class="control-label">Output Format</label>
+                                                <div class="radio-list">
+                                                    <div class="radio-group">
+                                                        <input type="radio" name="archiveoutput" id="output" value="complete" checked="checked" />
+                                                        <label class="label label-default label-adjustment"> Table </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-actions pull-right">
+                                                <button type="submit" class="btn btn-success">Generate</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-7">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="collapse" id="research">
+                        <p align="right"><img src="/images/reports/research-label.jpg" class="img-responsive" /></p>
+                        <div class="table-responsive">
+                            <table id="report-table">
+                                <thead>
+                                    <tr>
+                                        <th style="display:none;">
+                                            MySQL Statement
+                                        </th>
+                                        <th>
+                                            Report ID
+                                        </th>
+                                        <th>
+                                            Report Name
+                                        </th>
+                                        <th>
+                                            Created At
+                                        </th>
+                                        <th>
+                                            Tab Delimited (TXT) Download
+                                        </th>
+                                        <th>
+                                            Comma Delimited (CSV) Download
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for item in query -%}
+                                    <tr>
+                                        <td style="display:none;">{{ item.report_query}}</td>
+                                        <td>{{ item.id}}</td>
+                                        <td>{{ item.report_name }}</td>
+                                        <td>{{ item.created_at|date('Y-m-d g:i:s A', 240) }}</td>
+                                        <td><a href="/reports/mytsv?id={{ item.id }}" targe="blank">Download (TXT)</a>
+                                        </td>
+                                        <td><a href="/reports/mycsv?id={{ item.id }}" targe="blank">Download (CSV)</a>
+                                        </td>
+                                    </tr>
+                                    {%- endfor %}
+                                </tbody>
+                            </table>
+                            <hr />
+                            <br />
+                        </div>
+                        <ul>
+                            <br />
+                            <p>Basic Generators</p>
+                            <li>
+                                <i class="fa fa-database"></i> <a href="/reports/accreditedverify" class="iconify">Accredited Verify Requests (Database)</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-database"></i> <a href="/reports/accreditedverifystatusga" class="iconify">Accredited Verify Status (Google Analytics)</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-database"></i> <a href="/reports/accreditedverifycomments" class="iconify">Accredited Verify Comments (Google Analytics)</a>
+                            </li>
+                            <hr />
+                            <br />
+                            <p>Github Generators</p>
+                            <li>
+                                <i class="fa fa-database"></i> <a href="/reports/accreditedverifystatus" class="iconify">Accredited Verify Status (MySQL)</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-database"></i> <a href="/reports/sendgrid" class="iconify">SendGrid Alerts by Freq</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-database"></i> <a href="/reports/sugarcrm" class="iconify">Sugar CRM Export</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-database"></i> <a href="/reports/optins" class="iconify">Recent Opt Ins</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-database"></i> <a href="/reports/alloptins" class="iconify">All Opt Ins</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-database"></i> <a href="/reports/cowowebsite" class="iconify">Companies wo Website</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-database"></i> <a href="/reports/cofewtags" class="iconify">Companies w &lt;15 Tags</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-database"></i> <a href="/reports/cosourceteam" class="iconify">Companies w Team member as Source</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-database"></i> <a href="/reports/coswsameaddress" class="iconify">Multiple Companies w Same Address</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-database"></i> <a href="/reports/confundofferingorclosed" class="iconify">Non Fund Companies (Status: Offering or Closed)</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-database"></i> <a href="/reports/colocation" class="iconify">Companies w Location</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-database"></i> <a href="/reports/userregyesterday" class="iconify">User Registrations Yesterday</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-database"></i> <a href="/reports/coswsamename" class="iconify">Multiple Companies w Same Name</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-database"></i> <a href="/reports/coswmultideals" class="iconify">Companies w Multiple Deals</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-database"></i> <a href="/reports/spec" class="iconify">Spec</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-database"></i> <a href="/reports/claims" class="iconify">Claims</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-database"></i> <a href="/reports/appdeals" class="iconify">App Deals</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-database"></i> <a href="/reports/allleads" class="iconify">All Leads</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-database"></i> <a href="/reports/customa" class="iconify">Custom Report A</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-database"></i> <a href="/reports/customb" class="iconify">Custom Report B </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="collapse" id="marketing">
+                        <p align="right"><img src="/images/reports/emails-label.jpg" class="img-responsive" /></p>
+                        <div role="tabpanel">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#sendlocal" aria-controls="web" role="tab" data-toggle="tab">Sent/Opened/Clicked</a></li>
+                                <li role="presentation" class=""><a href="#sendga" aria-controls="web" role="tab" data-toggle="tab">Click Details</a></li>
+                            </ul>
+                        </div>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="sendlocal">
+                                <br />
+                                <div class="pull-left" style="padding:0 20px;">
+                                    <a href="#" name="lastweek" onclick="setsglocalemail(yesterday(), sevendays());" />Last 7 Days</a>
+                                </div>
+                                <div class="pull-left" style="padding:0 20px;">
+                                    <a href="#" name="lastweek" onclick="setsglocalemail(wednesday(-3), wednesday(-9));" />All Activity Last Week</a>
+                                </div>
+                                <div class="pull-left" style="padding:0 20px;">
+                                    <a href="#" name="clear" onclick="clearform();" />Clear Form</a>
+                                </div>
+                                <br />
+                                <hr />
+                                <form role="form" id="reports" action="/reports/getsglocalrecent">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-md-1">
+                                        </div>
+                                        <div class="col-xs-12 col-md-5">
+                                            <p>Query Activity: <strong>Post June 2015</strong></p>
+                                            <div class="form-group date-range">
+                                                <label class="control-label">Date Range</label>
+                                                <div id="range" class="input-group input-medium date-picker input-daterange" data-date="10/11/2012" data-date-format="yyyy-mm-dd">
+                                                    <input type="text" class="form-control" name="sglocalfrom" id="sglocalfrom" style="width:200px;" placeholder="From" /><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                </div>
+                                                <br />
+                                                <div id="range" class="input-group input-medium date-picker input-daterange" data-date="10/11/2012" data-date-format="yyyy-mm-dd">
+                                                    <input type="text" class="form-control" name="sglocalto" id="sglocalto" style="width:200px;" placeholder="To" /><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                </div>
+                                            </div>
+                                            <br />
+                                            <br />
+                                            <div class="form-group">
+                                                <label class="control-label">Output Format</label>
+                                                <div class="radio-list">
+                                                    <div class="radio-group">
+                                                        <input type="radio" name="sglocalformat" id="sglocalformat" value="table" checked="checked" />
+                                                        <label class="label label-success label-adjustment"> Table </label>
+                                                        <input type="radio" name="sglocalformat" id="sglocalformat" value="tsv" style="margin-left:1em;" />
+                                                        <label class="label label-warning label-adjustment"> TSV </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br />
+                                            <br />
+                                        </div>
+                                        <div class="col-xs-12 col-md-5">
+                                            <label class="control-label">Action Type</label>
+                                                <div class="radio-list">
+                                                    <div class="radio-group">
+                                                        <input type="radio" name="acttype" id="acttype" value="processed" checked="checked" />
+                                                        <label class="label label-default label-adjustment"> Sent </label>
+                                                        <input type="radio" name="acttype" id="acttype" value="open" style="margin-left:1em;" />
+                                                        <label class="label label-warning label-adjustment"> Opened </label>
+                                                        <input type="radio" name="acttype" id="acttype" value="click" style="margin-left:1em;" />
+                                                        <label class="label label-success label-adjustment"> Clicked </label>
+                                                    </div>
+                                                </div>
+                                                <br /><br />
+                                            <label class="control-label">Additional Filters</label>
+                                            <p><a data-toggle="collapse" href="#email-filter-sglocal" aria-expanded="false" aria-controls="optional-criteria">Set email filter</a></p>
+                                            <div class="collapse" id="email-filter-sglocal">
+                                                <br />
+                                                <div class="form-group">
+                                                    <label class="control-label">Email Address (Optional)</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div id="username-group" class="input-group input-medium">
+                                                        <input type="text" class="form-control" name="sglocalemail" id="sglocalemail" style="" placeholder="Email Address" />
+                                                    </div>
+                                                    <br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-1">
+                                        </div>
+                                    </div>
+                                    <div class="row"> 
+                                        <div class="col-xs-12 col-md-1">
+                                        </div>   
+                                        <div class="col-xs-12 col-md-10">
+                                            <div class="form-actions">
+                                                <p align="center">
+                                                    <button type="submit" class="btn btn-success pull-right">Generate</button>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-1">
+                                        </div> 
+                                    </div>
+                                </form>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="sendga">
+                                <br />
+                                <div class="pull-left" style="padding:0 20px;">
+                                    <a href="#" name="lastweek" onclick="setsggaemail(yesterday(), sevendays());" />Last 7 Days</a>
+                                </div>
+                                <div class="pull-left" style="padding:0 20px;">
+                                    <a href="#" name="lastweek" onclick="setsggaemail(wednesday(-3), wednesday(-9));" />All Activity Last Week</a>
+                                </div>
+                                <div class="pull-left" style="padding:0 20px;">
+                                    <a href="#" name="clear" onclick="clearform();" />Clear Form</a>
+                                </div>
+                                <br />
+                                <hr />
+                                <form role="form" id="reports" action="/reports/getsggarecent">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-md-1">
+                                        </div>
+                                        <div class="col-xs-12 col-md-10">
+                                            <hr /> {% if current %}
+                                            <p><span style="color:#00FF00"><i class="fa fa-check-square"></i></span> The Database <strong>is current</strong>. The database currently has events up to <strong>{{ date }}</strong>.</p>
+                                            {% else %}
+                                            <p><span style="color:#FF0000"><i class="fa fa-warning"></i></span> The database <strong>needs to be updated</strong>. The database currently only has events up to <strong>{{ date }}</strong>.</p>
+                                            {% endif %}
+                                            <hr />
+                                        </div>
+                                        <div class="col-xs-12 col-md-1">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-md-1">
+                                        </div>
+                                        <div class="col-xs-12 col-md-5">
+                                            <p>Query Activity: <strong>Post June 2015</strong></p>
+                                            <div class="form-group date-range">
+                                                <label class="control-label">Date Range</label>
+                                                <div id="range" class="input-group input-medium date-picker input-daterange" data-date="10/11/2012" data-date-format="yyyy-mm-dd">
+                                                    <input type="text" class="form-control" name="sggafrom" id="sggafrom" style="width:200px;" placeholder="From" /><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                </div>
+                                                <br />
+                                                <div id="range" class="input-group input-medium date-picker input-daterange" data-date="10/11/2012" data-date-format="yyyy-mm-dd">
+                                                    <input type="text" class="form-control" name="sggato" id="sggato" style="width:200px;" placeholder="To" /><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                </div>
+                                            </div>
+                                            <br />
+                                            <br />
+                                            <div class="form-group">
+                                                <label class="control-label">Output Format</label>
+                                                <div class="radio-list">
+                                                    <div class="radio-group">
+                                                        <input type="radio" name="sggaformat" id="format" value="table" checked="checked" />
+                                                        <label class="label label-success label-adjustment"> Table </label>
+                                                        <input type="radio" name="sggaformat" id="format" value="tsv" style="margin-left:1em;" />
+                                                        <label class="label label-warning label-adjustment"> TSV </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br />
+                                            <br />
+                                        </div>
+                                        <div class="col-xs-12 col-md-5">
+                                            <p><a data-toggle="collapse" href="#email-filter-sgga" aria-expanded="false" aria-controls="optional-criteria">Set email filter</a></p>
+                                            <div class="collapse" id="email-filter-sgga">
+                                                <br />
+                                                <div class="form-group">
+                                                    <label class="control-label">Email Address (Optional)</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div id="username-group" class="input-group input-medium">
+                                                        <input type="text" class="form-control" name="sggaemail" id="sggaemail" style="" placeholder="Email Address" />
+                                                    </div>
+                                                    <br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-1">
+                                        </div>
+                                    </div>
+                                    <div class="row"> 
+                                        <div class="col-xs-12 col-md-1">
+                                        </div>   
+                                        <div class="col-xs-12 col-md-10">
+                                            <div class="form-actions">
+                                                <p align="center">
+                                                    <button type="submit" class="btn btn-success pull-right">Generate</button>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-1">
+                                        </div> 
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-12">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} {% block javascripts %}
+<script src="//cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+<script src="/vendors/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/vendors/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="/vendors/bootstrap-daterangepicker/moment.min.js"></script>
+<script type="text/javascript" src="/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script type="text/javascript" src="/vendors/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="/vendors/select2/select2.min.js"></script>
+<script type="text/javascript" src="/vendors/datatables/media/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/vendors/datatables/extensions/TableTools/js/dataTables.tableTools.min.js"></script>
+<script type="text/javascript" src="/vendors/datatables/extensions/ColReorder/js/dataTables.colReorder.min.js"></script>
+<script type="text/javascript" src="/vendors/datatables/extensions/Scroller/js/dataTables.scroller.min.js"></script>
+<script type="text/javascript" src="/vendors/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
+<script src="/javascripts/reports/helpers.js"></script>
+<script src="/javascripts/reports/components.js"></script>
+<script src="/javascripts/reports/typeahead.js"></script>
+<script>
+$(document).ready(function() {
+    setformlive(today(), twodays());
+    ComponentsPickers.init();
+
+    var substringMatcher = function(strs) {
+        return function findMatches(q, cb) {
+            var matches, substringRegex;
+
+            // an array that will be populated with substring matches
+            matches = [];
+
+            // regex used to determine if a string contains the substring `q`
+            substrRegex = new RegExp(q, 'i');
+
+            $.each(strs, function(i, str) {
+                if (substrRegex.test(str)) {
+                    matches.push(str);
+                }
+            });
+
+            cb(matches);
+        };
+    };
+
+    $('#report-table').dataTable({
+        "order": [
+            [1, "desc"]
+        ]
+    });
+});
+
+function research() {
+    $("#research").collapse('hide');
+    $("#activity").collapse('hide');
+    $("#marketing").collapse('hide');
+    $("#research").collapse('show');
+}
+
+function activity() {
+    $("#research").collapse('hide');
+    $("#activity").collapse('hide');
+    $("#marketing").collapse('hide');
+    $("#activity").collapse('show');
+}
+
+function marketing() {
+    $("#research").collapse('hide');
+    $("#activity").collapse('hide');
+    $("#marketing").collapse('hide');
+    $("#marketing").collapse('show');
+}
+</script>
+{% endblock %}

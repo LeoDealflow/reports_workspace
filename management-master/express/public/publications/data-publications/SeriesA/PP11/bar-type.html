@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+.chart rect {
+    fill: steelblue;
+}
+.chart .axis {
+    font-size: 10pt;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif"Gotham";
+}
+.axis path {
+    display: none;
+}
+.axis line {
+    stroke: #fff;
+    stroke-opacity: 1;
+    shape-rendering: crispEdges;
+    z-index: 999;
+}
+</style>
+
+<body>
+    <script src="/javascripts/publications/d3.js"></script>
+    <script>
+    var rows = 3
+
+    var svg = d3.select("body").append("svg")
+        .attr("class", "chart");
+
+    svg.attr("width", 2000).attr("height", 2000)
+
+    var margin = {
+            top: 50,
+            right: 50,
+            bottom: 0,
+            left: 50
+        },
+        width = 800,
+        barHeight = 20,
+        height = barHeight * rows;
+
+    var maximum = 100;
+
+    var x = d3.scale.linear()
+        .domain([0, maximum])
+        .range([0, width]);
+
+
+    var xAxis = d3.svg.axis()
+        .scale(x)
+        .orient("top")
+        .tickSize(-height);
+
+    var legend = d3.select("svg")
+        .append("g")
+        .attr("width", width)
+        .attr("height", 600)
+        .attr("class", "legend");
+     /*
+      Colors
+      Theme Set B v1.0
+      AP
+      AW
+      AE
+      AF
+      AD
+      AQ
+      AU
+      BD
+      AR
+      AG
+      AJ
+      AZ
+      */
+    var a = d3.rgb(12, 24, 64);
+    var b = d3.rgb(172, 108, 130);
+    var c = d3.rgb(236, 229, 219);
+    var d = d3.rgb(190, 122, 102);
+    var e = d3.rgb(240, 198, 158);
+    var f = d3.rgb(242, 224, 133);
+    var g = d3.rgb(255, 188, 103);
+    var h = d3.rgb(206, 77, 69);
+    var i = d3.rgb(140, 110, 55);
+    var j = d3.rgb(145, 142, 117);
+    var k = d3.rgb(113, 147, 179);
+    var l = d3.rgb(10, 123, 131);
+    var color = d3.scale.ordinal().range([a, b, e, g, f, c, h, i, j, k]);
+
+    d3.tsv("vc-type.tsv", function(error, data) {
+
+        var chart = d3.select(".chart")
+            .append('g')
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");;
+
+        var g = chart.selectAll(".bars")
+            .data(data)
+            .enter().append("g")
+            .attr("class", "bars");
+
+        g.append("rect")
+            .attr("y", function(d, i) {
+                return i * barHeight;
+            })
+            .attr("height", barHeight - 1)
+            .attr("width", function(d) {
+                return x(d.numbers);
+            })
+            .style("fill", function(d) {
+                return color(d.name);
+            });
+
+
+        var l = legend.selectAll(".name")
+            .data(data)
+            .enter().append("g")
+            .attr("class", "name");
+
+        l.append("text")
+            .attr("x", function(d, i) {
+                return 130 + i * 210;
+            })
+            .attr("y", 180)
+            .attr("fill", function(d) {
+                return color(d.name);
+            })
+            .attr("font-size", "22pt")
+            .attr("font-weight", "900")
+            .attr("font-family", "Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif")
+            .text("■");
+
+
+        l.append("text")
+            .attr("x", function(d, i) {
+                return 150 + i * 210;
+            })
+            .attr("y", 180)
+            .attr("fill", "#000")
+            .attr("font-size", "16pt")
+            .attr("font-family", "Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif")
+            .text(function(d) {
+                return d.name + " (" + d.numbers + ")";
+            });
+
+        chart.append("g")
+            .attr("class", "axis")
+            .call(xAxis)
+            .select(".tick line")
+            .style("stroke", "#000");
+
+    });
+    </script>

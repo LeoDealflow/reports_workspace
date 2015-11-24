@@ -1,0 +1,53 @@
+{% extends '../layout.html' %} {% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css" /> {% endblock %} {% block content %}
+<div class="page-container">
+    <div class="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-12">
+                    <h3>Welcome to the Publication Production Interface</h3>
+                    <hr />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <p>Publication Graphics</p>
+                        <ul>
+                            <li><a href="/publications/graphics">Latest Issue Graphics</a></li>
+                        </ul>
+                        <br />
+                        <hr />
+                        <br />
+                        <p>Report Generator</p>
+                        <ul>
+                            <li><a href="/publications/upload_report">Upload a TSV for XML Generator</a></li>
+                            <li><a href="/publications/xml_processed">View Generated XML Table</a></li>
+                        </ul>
+                        <br />
+                        <hr />
+                        <br />
+                        <p>URL Set Generator</p>
+                        <ul>
+                            <li><a href="/publications/upload_urlset">Upload a TSV for URL Generator</a></li>
+                            <li><a href="/publications/url_processed">View Genderated URLs</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} {% block javascripts %}
+<script src="//cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+<script>
+jQuery.noConflict();
+jQuery(document).ready(function() {
+    jQuery('#xml-table').dataTable({
+        "order": [
+            [0, "desc"]
+        ]
+    });
+});
+</script>
+{% endblock %}

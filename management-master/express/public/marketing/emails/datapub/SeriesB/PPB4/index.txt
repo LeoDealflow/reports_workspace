@@ -1,0 +1,88 @@
+To view an online version of this email, click here ( [weblink] ). 
+
+What is a deal portal? (And how I realized I was building one.)
+
+I had a real light-bulb moment this week.
+
+Everyone gets them on occasion. And like many entrepreneurs, I live for them.  You know, that moment when you think you’ve figured something out that nobody else has.  And then you wonder… How’s that even possible?  Hasn’t everyone already figured everything out?
+
+While our team was working on our 7-minute pitch for the Finovate conference in New York, we spent a lot of time discussing our marketing message. Some of it we spent discussing macro-strategy ideas.  Some of it we spent discussing small details on marketing copy.  But all of our discussions had a feeling of introspection, with the backdrop of a project we’ve spent two years working on. One that’s been extremely challenging and incredibly inspiring at the same time.
+
+Then, like most light-bulb moments, I had that quick pop of inspiration.
+
+After we wrapped up our meeting in the conference room and went back to our desks, I started working on some copy for our website.  And it hit me. The perfect way to describe Dealflow.com in two words – “deal portal.”
+
+For quite some time, we’ve grappled with how to describe what we’re building. Our research team has been aggregating actively-marketed deal data for a while now, compiling information on over 55,000 transactions. All the while, we’ve generally called ourselves a “data aggregation platform for professional deal-makers.” But somehow this just didn’t seem to neatly sum up who we are or what we’re accomplishing. And as we’ve been getting closer to launching our product (not to mention that 7-minute Finovate pitch), coming up with a way to quickly capture what we’re doing was moving from the nice-to-have category into the must-do-right-now category.
+
+While we’ve been building Dealflow’s research database and technology, we’ve witnessed explosive growth in online platforms pitching private placements, pretty much all of them in the startup space. And to us, those platforms – which are largely operating as brokers – were deal portals.
+
+Then after suggesting in an email to our tech/product head Jordan Hadas that we should call ourselves the “first deal portal for institutional investors” (reflecting our focus on multiple asset types BUT NOT startups), he shot me back a quick message pointing out two things.
+
+The first was that even though internally we called those other websites “deal portals,” they didn’t call themselves that. Jordan found zero mention of that wording on websites that we at Dealflow referred to as deal portals. His second point was the lack of mainstream usage of the term “deal portal”— and he evidenced this by showing me Google search results.  In his words, “Dude, we can F*#%ing own this term.”
+
+We’re in the early innings of this online deal marketing game. And as I’ve now realized, there’s really nobody other than us creating an actual deal portal. Those other companies (the ones I used to call portals) are just deal brokers with relatively simple tech and no compilation of data or analytics at all. Jordan was pretty psyched. And I was too after realizing that Webster’s definition of a “portal” was actually a perfect description of what we do.
+
+I guess you could say we both had a bit of a light-bulb moment.
+
+In a roundabout way, I’d like to thank Jim Bruene and the guys at Finovate for being the catalyst here. We had an awesome conference this week which resulted in lots of interesting meetings and dozens of great leads.  (But most importantly, thanks to Jim for running a 7-minute presentation format which inspired us to be succinct.)
+
+Steven Dresner
+steven.dresner@dealflow.com                                                        
+
+
+--------------------------------------------------------------------------------
+
+Download the newsletter ( http://dealflow.com/publications )                                                        
+
+
+Learn How You Can Invest In Dealflow
+
+Companies are going beyond their personal networks to raise capital. They’re using deal portals, social networks, and a variety of investment databases to find investors. We make this process easier and personalized by putting everything in one place.
+
+On September 24 at 2pm, we’re hosting a live webcast to discuss investing in Dealflow.com. If you’d like to join us, you can register at this link: http://marketing.dealflow.com/dealflow-webcast-september-2015 ( http://marketing.dealflow.com/dealflow-webcast-september-2015 ( http://marketing.dealflow.com/dealflow-webcast-september-2015 )
+
+
+Industry News
+
+Beware of Companies Touting Compliant - In this week’s Crowdfund Insider, Anthony Zeoli writes an article that warns of companies touting “506(c) compliant” funding platforms ( http://www.crowdfundinsider.com/2015/09/74387-beware-of-companies-touting-506b-compliant-funding-platforms ). Anthony discusses one particular website and includes some analysis based on the recent Citizen.vc no-action letter.
+
+GroundFloor Announces First Approved Reg A+ Tier 1 Filing - Amy Wan, general counsel at Patch of Land,  analyzes GroundFloor’s somewhat humble filing ( http://www.crowdfundinsider.com/2015/09/74256-an-analysis-of-the-first-approved-real-estate-crowdfunding-regulation-a-filing ) for $545,000 worth of securities.
+
+EquityZen Raises $3.5M -  EquityZen ( https://equityzen.com ), which describes itself as connecting shareholders of private companies with investors seeking alternative investments, raised $3.5M this week.
+
+Peter Lehrman discusses Axial on Bloomberg TV - Peter Lehrman, Axial's CEO,  discusses the company's business model ( http://www.bloomberg.com/news/videos/2015-09-11/axial-the-social-network-for-dealmaking ) with Bloomberg's Emily Chang.
+
+Orchard Raises $30M - In a Series B funding round  Orchard Platform pulled in another $30M ( https://orchardplatform.com/community/news/online-lending-tech-firm-orchard-platform-raises-30-million/ ) with investors Canaan Partners, Conversion Capital, Nyca Partners, QED Investors, Spark Capital, Thomvest Ventures, Thrive Capital, and Victory Park Capital.
+
+PeerIQ Announced “New” Seed Funding -  PeerIQ ( http://www.peeriq.com ), a provider of tools for the P2P market, raised $2.5 million in new seed funding. Victory Park Capital was joined by Fenway Summer Ventures, Uprising and John Mack. The company previously raised $6 million in seed funding so it’s a little unclear why this was announced as a “new” seed round.
+
+Crowdfunding a $500 Million Ferris Wheel - This  New York Times article by Randall Smith ( http://www.nytimes.com/2015/09/08/business/dealbook/crowdfunding-a-500-million-ferris-wheel-with-a-wall-street-spin.html?smid=tw-share&_r=0 ) takes a look at how the 630-foot Ferris wheel under construction on Staten Island is being financed. Broker-dealer North Capital intends to sell upwards of $30M of the deal via its 99Funding platform and other crowdfunding sites.
+
+
+In this Week's Newsletter
+
+During the reporting period Sep 7 to Sep 13, 2015, we tracked the announcement of 167 launched fundraisings for privately-held companies worth a total of $1,465,913,240 in aggregate value.  Data also includes Rule 506(c) fundraisings.
+
+
+
+Download the newsletter ( http://dealflow.com/publications ) 
+
+
+
+© 2015 Dealflow Analytics, Inc. All rights reserved. Dealflow Analytics, Inc. (d/b/a Dealflow.com; “Dealflow”) is not a registered broker-dealer, not a registered investment advisor and is not providing any investment, financial or legal advice. Nothing in this communication (including the attached newsletter, the “Materials”) constitutes an offer to sell or a solicitation of an offer to buy any securities. Nothing in the Materials constitutes or implies any endorsement, sponsorship, authorization, affiliation, approval or recommendation by Dealflow of any content, information, investment opportunities, securities, products or services referenced in the Materials, or otherwise. Dealflow has no obligation to undertake and has not done any due diligence, analysis or other investigation of any information contained in the Materials. Dealflow makes no express or implied representation or warranty as to, and accepts no responsibility for, the veracity, accuracy or completeness of any information contained in the Materials, for any securities, investment opportunities, or transactions discussed in the Materials, or for the value or suitability thereof. Dealflow does not have any obligation to update or revise any information contained in the Materials to reflect any change in events, conditions, or circumstances that may impact the veracity, accuracy or completeness of such information. The Materials are being presented for your general information and for personal use only. This email is only intended for its initial recipient and may not be forwarded to any other recipient and is intended to only be reviewed by “accredited investors” as defined in Rule 501 of the Securities Act of 1933. If you are in a jurisdiction where your receipt of this email is not in accordance with applicable law, you may not review this email and should contact Dealflow. By opening and reading this email you understand and agree to the disclaimers above, certify that you are an “accredited investor”, and agree that you are authorized to receive this email. You further agree that Dealflow has no liability to you whatsoever in connection with the Materials, including, without limitation, any losses you may incur in connection with any investment in any of the opportunities described in the Materials. Always conduct thorough due diligence and consult with your financial, legal and tax professionals before investing in any opportunity. 
+
+
+
+This email was sent to: [Email Address]                                                            
+This email was sent by: Dealflow.com                                                            
+131 Jericho Turnpike Jericho, NY 11753                                                            
+Tel (516) 876-8006                                                            
+steven.dresner@dealflow.com ( mailto:steven.dresner@dealflow.com )                                                            
+http://dealflow.com ( http://dealflow.com )                                                            
+
+Click here ( [unsubscribe] ) to leave this mailing list.                                                            
+
+
+
+
+
